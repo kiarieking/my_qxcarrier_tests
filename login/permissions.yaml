@@ -1,0 +1,24 @@
+appId: com.quatrixglobal.partner.v3.preview
+---
+- launchApp
+- runFlow:
+    when:
+        visible: 'Welcome Back!'
+    file: "login.yaml"
+- assertVisible: Permissions & Services
+- tapOn: Grant all
+- scrollUntilVisible:
+    element:
+      text: "Quatrix Driver v3"
+    direction: "DOWN"
+    timeout: 20000
+    speed: 40
+- tapOn: Quatrix Driver v3
+- assertVisible: Allow background usage
+- tapOn: Enable for real-time updates, disable to save battery
+- tapOn: Unrestricted 
+- tapOn: "Navigate up"
+- tapOn: "Navigate up"
+- tapOn: "Navigate up"
+- tapOn: "Continue"
+ 

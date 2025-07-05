@@ -1,0 +1,21 @@
+appId: com.quatrixglobal.partner.v3.preview
+---
+- launchApp
+- runFlow:
+    when:
+        visible: 'Welcome Back!'
+    file: 'login.yaml'
+- assertVisible: 'Home'
+- tapOn: 
+    id: "tabs/profile-btn"
+- assertVisible: 'Profile'
+- scrollUntilVisible:
+    element:
+      text: 'Sign out securely'
+    direction: "DOWN"
+    timeout: 20000
+    speed: 40
+- tapOn: 'Sign Out'
+- assertVisible: 'Sign out?'
+- tapOn: 'Sign out'
+

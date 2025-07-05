@@ -1,0 +1,37 @@
+appId: com.quatrixglobal.partner.v3.preview
+---
+- launchApp
+- assertVisible: Welcome Back!
+- tapOn: Phone number
+- eraseText
+- inputText: "0711223344"
+- tapOn: Password
+- eraseText
+- inputText: "123"
+- tapOn: Sign In
+- assertVisible: That account doesn’t exist.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,26 @@
+appId: com.quatrixglobal.partner.v3.preview
+---
+- launchApp
+- runFlow: 
+   when: 
+     visible: 'Welcome Back!'
+   file: '../login/login.yaml'
+- assertVisible: 'Home'   
+- tapOn:
+    id: "tabs/profile-btn"
+- assertVisible: 'Profile'
+- scrollUntilVisible: 
+    element:
+      text: 'Manage availability'
+    direction: "DOWN"
+    timeout: 20000
+    speed: 40
+- tapOn: 'Manage availability'
+- swipe:
+    start: "13%,92%"
+    end: "89%,92%"
+    speed: 100
+- runFlow: 
+    when:
+      visible: 'Permissions & Services'
+    file: '../login/permissions.yaml'

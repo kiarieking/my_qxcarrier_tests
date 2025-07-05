@@ -1,0 +1,10 @@
+appId: com.quatrixglobal.partner.v3.preview
+---
+    - launchApp
+    - assertVisible: "Welcome Back!"
+    - tapOn: "Phone number"
+    - eraseText
+    - inputText: "0711254254"
+    - tapOn: "Password"
+    - inputText: "123"
+    - tapOn: "Sign In"

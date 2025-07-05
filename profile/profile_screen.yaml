@@ -1,0 +1,15 @@
+appId: com.quatrixglobal.partner.v3.preview
+---
+- launchApp
+- runFlow:
+    when:
+        visible: 'Welcome Back!'
+    file: '../login/login.yaml'
+- runFlow:
+    when:
+        visible: 'Permissions & Services'
+    file: '../login/permissions.yaml'
+- assertVisible: 'Home'   
+- tapOn:
+    id: "tabs/profile-btn"
+- assertVisible: 'Profile'
