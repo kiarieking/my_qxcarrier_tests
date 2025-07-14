@@ -8,6 +8,10 @@ pipeline{
         stage("A"){
             steps{
                 echo "========executing step 1========"
+
+                sh ''' 
+                   
+                    '''
             }
             post{
                 always{
@@ -27,10 +31,21 @@ pipeline{
             echo "========always========"
         }
         success{
-            echo "========pipeline executed successfully ========"
+            office365ConnectorSend(
+                status: "Build status",
+                webhookUrl: "${MSTEAMS_HOOK}",
+                message: "Build Successful",
+                color: "#00ff00",
+
+            )
         }
         failure{
-            echo "========pipeline execution failed========"
+            office365ConnectorSend(
+                status: "Build status",
+                webhookUrl: "${MSTEAMS_HOOK}",
+                message: "Build Failed",
+                color: "#EE4B2B",
+            )
         }
     }
 }
