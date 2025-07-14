@@ -10,7 +10,7 @@ pipeline{
                 echo "========executing step 1========"
 
                 sh ''' 
-                   
+                    echo "installed office plugin on jenkins"
                     '''
             }
             post{
