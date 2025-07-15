@@ -12,10 +12,9 @@ pipeline{
                 sh ''' 
                     echo "installed office plugin on jenkins"
 
-                    emulator -avd Medium_Phone_API_35
-
                     cd /home/kkiarie/code/my_carrier_tests/quatrix_mobile
-
+                    
+                    emulator -avd Medium_Phone_API_35
 
                     '''
             }
