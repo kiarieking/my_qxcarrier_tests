@@ -10,7 +10,7 @@ pipeline{
                 echo "========executing step 1========"
 
                 sh ''' 
-                    echo "launch emulator3"
+                    echo "launch emulator4"
 
                     sudo -u kkiarie /home/kkiarie/Android/Sdk/emulator/emulator -avd Medium_Phone_API_35
                     '''
