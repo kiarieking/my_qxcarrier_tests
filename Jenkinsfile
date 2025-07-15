@@ -10,7 +10,7 @@ pipeline{
                 echo "========executing step 1========"
 
                 sh ''' 
-                    echo "launch emulator"
+                    echo "launch emulator2"
 
                     cd /home/kkiarie/code/my_carrier_tests/quatrix_mobile
 
