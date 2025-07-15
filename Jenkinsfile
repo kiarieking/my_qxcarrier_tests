@@ -10,10 +10,10 @@ pipeline{
                 echo "========executing step 1========"
 
                 sh ''' 
-                    echo "installed office plugin on jenkins"
+                    echo "launch emulator"
 
                     cd /home/kkiarie/code/my_carrier_tests/quatrix_mobile
-                    
+
                     emulator -avd Medium_Phone_API_35
 
                     '''
