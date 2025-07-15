@@ -12,9 +12,9 @@ pipeline{
                 sh ''' 
                     echo "launch emulator3"
 
-                    cd /home/kkiarie/code/my_carrier_tests/quatrix_mobile
+                    su kkiarie
 
-                    emulator -avd Medium_Phone_API_35
+                    sudo -u kkiarie /home/kkiarie/Android/Sdk/emulator/emulator -avd Medium_Phone_API_35
 
                     '''
             }
