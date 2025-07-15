@@ -12,10 +12,7 @@ pipeline{
                 sh ''' 
                     echo "launch emulator3"
 
-                    su kkiarie
-
                     sudo -u kkiarie /home/kkiarie/Android/Sdk/emulator/emulator -avd Medium_Phone_API_35
-
                     '''
             }
             post{
